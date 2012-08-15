@@ -1,0 +1,5 @@
+{
+    "port":8981,
+    "pidFile": "./hoge.pid",
+    "documentRoot":"/var/youget"
+}

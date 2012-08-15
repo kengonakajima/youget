@@ -1,0 +1,10 @@
+{
+    "name": "youget",
+    "skip": [  ],
+    "workdir" : "sv",
+    "procs": {
+      "main": {
+        "exec": "sv/main.lua"                    
+      }
+    }
+}
