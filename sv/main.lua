@@ -13,8 +13,10 @@ local conf = mergeJSONs( "./defaults.json", confpath )
 
 http.createServer( function(req,res)
     if httpServeStaticFiles(req,res, conf.documentRoot, nil ) then
+      print( "OK URL:", req.url )
       return
     end
-    res:sendFile( "notfound.html" )    
+    print( "NG URL:", req.url )   
+    httpSendFile( res, "notfound.html" )
   end):listen( conf.port, "0.0.0.0" )
 print("listen on port:", conf.port) 
