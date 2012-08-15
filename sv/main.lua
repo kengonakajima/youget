@@ -20,3 +20,6 @@ http.createServer( function(req,res)
     httpSendFile( res, "notfound.html" )
   end):listen( conf.port, "0.0.0.0" )
 print("listen on port:", conf.port) 
+
+createCleanPidFile( conf.pidFile )
+ignoreSIGPIPE()
