@@ -1,4 +1,4 @@
 youget
 ======
 
-minimal static file server by luvit, suitable for prototyping
+minimal static file HTTP server by luvit, suitable for prototyping
