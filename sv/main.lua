@@ -17,9 +17,13 @@ http.createServer( function(req,res)
       return
     end
     print( "NG URL:", req.url )   
-    httpSendFile( res, "notfound.html" )
+    httpSendRaw( res, 404, "text/plain", "document not found" )
   end):listen( conf.port, "0.0.0.0" )
 print("listen on port:", conf.port) 
 
 createCleanPidFile( conf.pidFile )
 ignoreSIGPIPE()
+
+process:on("error", function(e)
+    print("error handler. e:", e)
+  end)
